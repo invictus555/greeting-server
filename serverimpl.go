@@ -25,7 +25,7 @@ func (s GreetingServerImpl) SayHello(ctx context.Context, in *HelloRequest) (*He
 func (s GreetingServerImpl) SayBye(ctx context.Context, in *emptypb.Empty) (*ByeResponse, error) {
 	resp := new(ByeResponse)
 	fmt.Printf("Get remote call from client, the context is: %s\n\n", ctx)
-	resp.Message = "GoodBye...."
+	resp.Message = "GoodBye " + greetingWords + "..."
 
 	return resp, nil
 }
