@@ -10,17 +10,17 @@ import (
 )
 
 var (
-	port          *int
-	greetingWords string
+	port    *int
+	version string
 )
 
 var greetingServerImpl = GreetingServerImpl{}
 
 func init() {
 	// 获取环境变量GREETING_WORDS
-	greetingWords = os.Getenv("GREETING_WORDS")
-	if greetingWords == "" {
-		greetingWords = "default"
+	version = os.Getenv("GREETING_WORDS")
+	if version == "" {
+		version = "default"
 	}
 
 	// 设置获取GreetingServer监听端口的命令行参数名称，默认值，使用说明
